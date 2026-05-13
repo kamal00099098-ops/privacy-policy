@@ -34,11 +34,11 @@
         .lang-switch {
             position: fixed;
             top: 16px;
-            left: 16px;   /* ثابت لا يتغير أبداً */
+            left: 16px;
             background: var(--white);
             border: 2px solid var(--main-blue);
             color: var(--main-blue);
-            padding: 6px 12px;   /* تصغير الزر */
+            padding: 6px 12px;
             border-radius: 40px;
             cursor: pointer;
             font-weight: 800;
@@ -140,6 +140,94 @@
             border-left: none;
             border-right: 3px solid #E2E8F0;
         }
+
+        /* ========================= */
+        /* RESPONSIVE FIX (ADDED ONLY) */
+        /* ========================= */
+
+        @media (max-width: 1024px) {
+            .policy-wrapper {
+                max-width: 95%;
+                padding: 35px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 12px;
+            }
+
+            .policy-wrapper {
+                padding: 25px;
+                border-radius: 22px;
+            }
+
+            .app-logo-text {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .lang-switch {
+                top: 12px;
+                left: 12px;
+                padding: 5px 10px;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .policy-wrapper {
+                padding: 18px;
+                margin: 20px auto;
+                border-radius: 18px;
+            }
+
+            header {
+                margin-bottom: 30px;
+            }
+
+            .app-logo-text {
+                font-size: 24px;
+            }
+
+            .policy-title {
+                font-size: 14px;
+            }
+
+            .update-date {
+                font-size: 12px;
+            }
+
+            .section-box {
+                padding-left: 12px;
+                margin-bottom: 25px;
+            }
+
+            h2 {
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 13px;
+                line-height: 1.7;
+            }
+
+            .contact-area b {
+                font-size: 16px;
+            }
+        }
+
     </style>
 </head>
 
