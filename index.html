@@ -1,233 +1,266 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy | كلماتي</title>
-<style>
-:root {
-    --primary: #6d28d9;
-    --primary-light: #8b5cf6;
-    --bg-dark: #0f172a;
-    --card-bg: rgba(30, 41, 59, 0.7);
-    --text-main: #f1f5f9;
-    --text-dim: #94a3b8;
-    --accent: #fbbf24;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | مذكراتي</title>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;500;800&display=swap" rel="stylesheet">
 
-body {
-    min-height: 100vh;
-    color: var(--text-main);
-    line-height: 1.7;
-    background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
-    position: relative;
-    overflow-x: hidden;
-}
+    <style>
+        :root {
+            --main-blue: #42A5F5;
+            --soft-bg: #F8FAFC;
+            --text-dark: #1E293B;
+            --text-light: #64748B;
+            --white: #FFFFFF;
+        }
 
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image:
-        radial-gradient(circle at 20% 30%, rgba(109, 40, 217, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.1) 0%, transparent 40%);
-    z-index: -1;
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans Arabic', sans-serif;
+        }
 
-.container {
-    position: relative;
-    z-index: 2;
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 40px;
-    background: var(--card-bg);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-radius: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-}
+        body {
+            background-color: var(--soft-bg);
+            color: var(--text-dark);
+            line-height: 1.8;
+            padding: 20px;
+        }
 
-.lang-btn {
-    position: fixed;
-    top: 25px;
-    right: 30px;
-    background: var(--primary);
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 12px;
-    font-weight: 700;
-    cursor: pointer;
-    z-index: 1000;
-    box-shadow: 0 10px 15px -3px rgba(109, 40, 217, 0.4);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
+        .lang-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--white);
+            border: 2px solid var(--main-blue);
+            color: var(--main-blue);
+            padding: 8px 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 800;
+            z-index: 100;
+        }
 
-.lang-btn:hover {
-    background: var(--primary-light);
-    transform: translateY(-2px);
-}
+        .policy-wrapper {
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 32px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+        }
 
-h1 {
-    text-align: center;
-    font-size: 38px;
-    font-weight: 800;
-    background: linear-gradient(to right, #a78bfa, #f472b6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 40px;
-}
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
 
-h2 {
-    color: var(--primary-light);
-    margin: 30px 0 10px;
-    font-size: 22px;
-    display: flex;
-    align-items: center;
-}
+        .policy-title {
+            font-size: 16px;
+            color: var(--text-light);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
 
-h2::before {
-    content: "";
-    display: inline-block;
-    width: 4px;
-    height: 20px;
-    background: var(--accent);
-    margin-right: 12px;
-    border-radius: 2px;
-}
+        .app-logo-text {
+            color: var(--main-blue);
+            font-size: 34px;
+            font-weight: 800;
+        }
 
-p {
-    color: var(--text-dim);
-    font-size: 16px;
-    margin-bottom: 15px;
-}
+        .update-date {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-top: 10px;
+        }
 
-.contact-box {
-    margin-top: 40px;
-    padding: 25px;
-    background: rgba(109, 40, 217, 0.1);
-    border-radius: 16px;
-    border: 1px dashed var(--primary-light);
-}
+        .section-box {
+            margin-bottom: 40px;
+            padding-left: 20px;
+            border-left: 3px solid #E2E8F0;
+        }
 
-.contact-box b {
-    color: var(--accent);
-}
+        h2 {
+            font-size: 20px;
+            color: var(--main-blue);
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
 
-.footer {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 14px;
-    color: #64748b;
-    padding-bottom: 20px;
-}
+        p {
+            font-size: 15px;
+            color: var(--text-light);
+            text-align: justify;
+        }
 
-[dir="rtl"] h2::before {
-    margin-right: 0;
-    margin-left: 12px;
-}
+        .contact-area {
+            margin-top: 25px;
+            text-align: center;
+        }
 
-[dir="rtl"] {
-    text-align: right;
-}
+        .contact-area b {
+            color: var(--main-blue);
+            font-size: 18px;
+            display: block;
+            margin-top: 5px;
+        }
 
-@media (max-width: 640px) {
-    .container {
-        margin: 80px 20px 40px;
-        padding: 25px;
-    }
-    h1 { font-size: 28px; }
-    .lang-btn { top: 15px; right: 15px; padding: 10px 20px; }
-}
-</style>
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-light);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        body.ar-mode {
+            direction: rtl;
+            text-align: right;
+        }
+
+        body.ar-mode .lang-switch {
+            right: auto;
+            left: 20px;
+        }
+
+        body.ar-mode .section-box {
+            padding-left: 0;
+            padding-right: 20px;
+            border-left: none;
+            border-right: 3px solid #E2E8F0;
+        }
+    </style>
 </head>
-<body>
 
-<button class="lang-btn" onclick="toggleLang()" id="btn">العربية</button>
+<body id="mainBody">
 
-<div class="container">
-    <h1 id="title">Privacy Policy | كلماتي</h1>
+<button class="lang-switch" onclick="changeLanguage()" id="langBtn">العربية</button>
 
-    <h2 id="h1">Introduction</h2>
-    <p id="p1">كلماتي is committed to protecting user privacy. This game is designed to provide a high-quality educational and entertainment experience while ensuring the highest standards of data protection.</p>
+<div class="policy-wrapper">
 
-    <h2 id="h2">Information Collection</h2>
-    <p id="p2">Our application does not collect, store, or transmit any personally identifiable information. We do not ask for your name, email, phone number, or any other sensitive data.</p>
+    <header>
+        <div class="policy-title" id="policyTitle">Privacy Policy</div>
+        <div class="app-logo-text" id="appTitle">مذكراتي</div>
+        <div class="update-date" id="updateDate">Last Update: May 2026</div>
+    </header>
 
-    <h2 id="h3">Data Processing</h2>
-    <p id="p3">All game data, including levels reached, coins earned, and settings, are stored locally on your device. We do not use external servers to store your personal progress.</p>
-
-    <h2 id="h4">Permissions</h2>
-    <p id="p4">The application requests minimal permissions only. It requires internet access for system-level functions (like opening links) and vibration permission to enhance the gaming experience.</p>
-
-    <h2 id="h5">Third-Party Services & Ads</h2>
-    <p id="p5">To keep the game free, we may integrate third-party advertising services (such as Google AdMob) in future updates. These services may use non-personal identifiers to serve relevant advertisements.</p>
-
-    <h2 id="h6">Children's Privacy</h2>
-    <p id="p6">كلماتي is a family-friendly game suitable for all ages. We comply with COPPA and do not knowingly collect personal information from children under the age of 13.</p>
-
-    <h2 id="h7">Updates to This Policy</h2>
-    <p id="p7">We may update this policy to reflect changes in our practices or for legal reasons. We encourage you to review this page periodically.</p>
-
-    <div class="contact-box">
-        <h2 id="h8" style="margin-top:0">Contact Us</h2>
-        <p id="p8">If you have any questions or suggestions, please contact us at:<br><b>kamal00099098@gmail.com</b></p>
+    <div class="section-box">
+        <h2 id="h1">1. Introduction</h2>
+        <p id="p1">
+            Privacy is a fundamental right for every user. The "مذكراتي" app is designed to give you a simple, safe, and private experience.
+            We respect your data and we make sure your personal information is always protected while using the app.
+        </p>
     </div>
 
-    <div class="footer" id="footer">
-        © 2026 كلماتي GAME - All Rights Reserved
+    <div class="section-box">
+        <h2 id="h2">2. Data Storage</h2>
+        <p id="p2">
+            All notes, writings, and settings you create inside the app are stored locally on your device only.
+            We do not upload your data to any server, cloud storage, or external database.
+            This means everything you write stays on your phone and is not shared with anyone.
+        </p>
     </div>
+
+    <div class="section-box">
+        <h2 id="h3">3. Data Collection</h2>
+        <p id="p3">
+            We do not collect any personal data from you.
+            The app does not require registration, login, email, phone number, or any personal identity information.
+            We also do not track your usage, behavior, or activity inside the app.
+        </p>
+    </div>
+
+    <div class="section-box">
+        <h2 id="h4">4. Permissions</h2>
+        <p id="p4">
+            The app only requests the minimum permissions required to function properly.
+            These permissions are used only for saving and reading data locally on your device.
+            We do not access your camera, microphone, contacts, location, or photo gallery at any time.
+        </p>
+    </div>
+
+    <div class="section-box">
+        <h2 id="h5">5. Advertisements</h2>
+        <p id="p5">
+            The "مذكراتي" app does not contain any advertisements.
+            You will not see banners, popups, or any kind of ad content while using the app.
+        </p>
+    </div>
+
+    <div class="section-box">
+        <h2 id="h6">6. Policy Updates</h2>
+        <p id="p6">
+            This privacy policy may be updated from time to time to improve clarity or reflect changes in the app.
+            Any updates will be shown in this page, and users are advised to review it occasionally.
+        </p>
+    </div>
+
+    <div class="section-box">
+        <h2 id="h7">7. Contact</h2>
+        <p id="p7">
+            If you have any questions, you can contact us anytime.
+        </p>
+
+        <div class="contact-area">
+            <span id="contactTxt">Email:</span>
+            <b>kamal00099098@gmail.com</b>
+        </div>
+    </div>
+
+    <footer id="copyRight">© 2026 مذكراتي</footer>
 </div>
 
 <script>
-let isArabic = false;
-function toggleLang() {
-    isArabic = !isArabic;
-    const btn = document.getElementById("btn");
-    const body = document.body;
+let currentLang = "en";
 
-    if (isArabic) {
+function changeLanguage() {
+    const body = document.getElementById("mainBody");
+    const btn = document.getElementById("langBtn");
+
+    if (currentLang === "en") {
+        currentLang = "ar";
+        body.classList.add("ar-mode");
         body.dir = "rtl";
         btn.innerText = "English";
 
-        document.getElementById("title").innerText = "سياسة الخصوصية | كلماتي";
-        document.getElementById("h1").innerText = "المقدمة";
-        document.getElementById("p1").innerText = "تلتزم لعبة (كلماتي) بحماية خصوصية المستخدمين. تم تصميم هذه اللعبة لتوفير تجربة تعليمية وترفيهية عالية الجودة مع ضمان أعلى معايير حماية البيانات.";
+        document.getElementById("policyTitle").innerText = "سياسة الخصوصية";
+        document.getElementById("appTitle").innerText = "مذكراتي";
+        document.getElementById("updateDate").innerText = "آخر تحديث: مايو 2026";
 
-        document.getElementById("h2").innerText = "جمع المعلومات";
-        document.getElementById("p2").innerText = "تطبيقنا لا يقوم بجمع أو تخزين أو نقل أي معلومات تعريف شخصية. نحن لا نطلب اسمك أو بريدك الإلكتروني أو رقم هاتفك أو أي بيانات حساسة أخرى.";
+        document.getElementById("h1").innerText = "1. المقدمة";
+        document.getElementById("p1").innerText =
+        "الخصوصية حق أساسي لكل مستخدم. تم تصميم تطبيق مذكراتي ليمنحك تجربة بسيطة وآمنة وخاصة. نحن نحترم بياناتك ونضمن حمايتها أثناء استخدام التطبيق.";
 
-        document.getElementById("h3").innerText = "معالجة البيانات";
-        document.getElementById("p3").innerText = "يتم تخزين جميع بيانات اللعبة، بما في ذلك المستويات التي تم الوصول إليها، والعملات المكتسبة، والإعدادات، محلياً على جهازك فقط. نحن لا نستخدم خوادم خارجية لتخزين تقدمك الشخصي.";
+        document.getElementById("h2").innerText = "2. تخزين البيانات";
+        document.getElementById("p2").innerText =
+        "كل الملاحظات والكتابات والإعدادات التي تنشئها داخل التطبيق يتم تخزينها محليًا على جهازك فقط. لا نقوم برفع بياناتك إلى أي خادم أو سحابة أو قاعدة بيانات خارجية، مما يعني أن كل شيء تكتبه يبقى على هاتفك ولا تتم مشاركته مع أي جهة.";
 
-        document.getElementById("h4").innerText = "الأذونات";
-        document.getElementById("p4").innerText = "يطلب التطبيق الحد الأدنى من الأذونات فقط. يتطلب الوصول إلى الإنترنت لوظائف النظام الأساسية (مثل فتح الروابط) وإذن الاهتزاز لتحسين تجربة اللعب.";
+        document.getElementById("h3").innerText = "3. جمع البيانات";
+        document.getElementById("p3").innerText =
+        "نحن لا نقوم بجمع أي بيانات شخصية منك. التطبيق لا يحتاج إلى تسجيل أو تسجيل دخول أو بريد إلكتروني أو رقم هاتف أو أي معلومات هوية شخصية. كما أننا لا نقوم بتتبع استخدامك أو سلوكك داخل التطبيق.";
 
-        document.getElementById("h5").innerText = "خدمات الطرف الثالث والإعلانات";
-        document.getElementById("p5").innerText = "للحفاظ على مجانية اللعبة، قد نقوم بدمج خدمات إعلانية من أطراف ثالثة (مثل Google AdMob) في التحديثات المستقبلية. قد تجمع هذه الخدمات معرفات غير شخصية لعرض إعلانات ذات صلة.";
+        document.getElementById("h4").innerText = "4. الأذونات";
+        document.getElementById("p4").innerText =
+        "التطبيق يطلب فقط أقل الأذونات الضرورية للعمل بشكل صحيح. هذه الأذونات تستخدم فقط لحفظ وقراءة البيانات محليًا على جهازك. نحن لا نصل إلى الكاميرا أو الميكروفون أو جهات الاتصال أو الموقع أو معرض الصور في أي وقت.";
 
-        document.getElementById("h6").innerText = "خصوصية الأطفال";
-        document.getElementById("p6").innerText = "كلماتي هي لعبة مناسبة للعائلة ومناسبة لجميع الأعمار. نحن نلتزم بقوانين حماية خصوصية الأطفال ولا نجمع معلومات شخصية من الأطفال دون سن 13 عاماً.";
+        document.getElementById("h5").innerText = "5. الإعلانات";
+        document.getElementById("p5").innerText =
+        "تطبيق مذكراتي لا يحتوي على أي إعلانات. لن ترى أي إعلانات أو نوافذ منبثقة أو محتوى إعلاني أثناء استخدام التطبيق.";
 
-        document.getElementById("h7").innerText = "تحديثات السياسة";
-        document.getElementById("p7").innerText = "قد نقوم بتحديث هذه السياسة لتعكس التغييرات في ممارساتنا أو لأسباب قانونية. ننصحك بمراجعة هذه الصفحة بشكل دوري.";
+        document.getElementById("h6").innerText = "6. تحديثات السياسة";
+        document.getElementById("p6").innerText =
+        "قد يتم تحديث سياسة الخصوصية من وقت لآخر لتحسين الوضوح أو لمواكبة التغييرات في التطبيق. سيتم عرض أي تحديثات في هذه الصفحة، وينصح المستخدم بمراجعتها بشكل دوري.";
 
-        document.getElementById("h8").innerText = "تواصل معنا";
-        document.getElementById("p8").innerHTML = "إذا كان لديك أي أسئلة أو اقتراحات، يرجى التواصل معنا عبر البريد الإلكتروني:<br><b>kamal00099098@gmail.com</b>";
+        document.getElementById("h7").innerText = "7. التواصل";
+        document.getElementById("p7").innerText =
+        "إذا كان لديك أي أسئلة يمكنك التواصل معنا في أي وقت.";
 
-        document.getElementById("footer").innerText = "© 2026 لعبة كلماتي - جميع الحقوق محفوظة";
+        document.getElementById("contactTxt").innerText = "البريد الإلكتروني:";
+        document.getElementById("copyRight").innerText = "© 2026 مذكراتي";
+
     } else {
         location.reload();
     }
